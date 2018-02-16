@@ -14,8 +14,11 @@ public class ReviewRepository {
 		
 		
 	public ReviewRepository() {
-		Review firstReview = new Review(12345L,"Home Alone","www","Movies","stuff");
-		addReview(firstReview);
+		Review firstReview = new Review(12345L,"Home Alone","/images/homeAlone.jpg","Movies","clasic movie we grew up on");
+		Review secondReview = new Review(12346L,"Planes, Trains, and Automobiles","/images/planestrains.jpg","Movies","great movie for the holidays");
+		Review thirdReview = new Review(12347L,"A Christmas Story","/images/farkus-1280x720.jpg","Movies","one word....F-R-A-G-I-L-E"); 
+		
+		addReview(firstReview,secondReview,thirdReview);
 	}
 
 	public void addReview(Review... reviews) {

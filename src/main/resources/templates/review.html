@@ -3,22 +3,24 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>Course Specifics</title>
+	<title>Review</title>
 </head>
 
 <body>
-	<header>
-		Course Specifics
-	</header>
+	<h1>
+		Review Specifics
+	</h1>
 
-	<div th:each="review: ${reviews}">
+	<span th:each="review: ${reviews}">
 		
+		<img th:src="${review.imageUrl}"/>
+		<h2 th:text="${review.reviewCategory}"/>
 		<p th:text="${review.title}" />
-		<p th:text="${review.description}"/>
+		<p th:text="${review.content}"/>
 
-	</div>
+	</span>
 	
-	<a href="course-repository.html">Home Page</a>
+	<a href="http://localhost:8080/reviews">Home Page</a>
 
 </body>
 </html>

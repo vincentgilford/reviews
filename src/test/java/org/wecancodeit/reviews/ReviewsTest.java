@@ -94,7 +94,6 @@ public class ReviewsTest {
 		
 		String check = underTest.getContent();
 		
-		
 		assertTrue(check instanceof String);
 	}
 	

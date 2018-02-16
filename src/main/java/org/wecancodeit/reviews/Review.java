@@ -1,5 +1,8 @@
 package org.wecancodeit.reviews;
 
+import org.springframework.stereotype.Component;
+
+
 public class Review {
 
 	private Long id;
@@ -8,7 +11,7 @@ public class Review {
 	private String reviewCategory;
 	private String content;
 
-	public Review(Long id, String title, String imageUrl, String reviewCategory, String content) {
+	public Review(long id, String title, String imageUrl, String reviewCategory, String content) {
 		this.id = id;
 		this.title = title;
 		this.imageUrl = imageUrl;

@@ -12,11 +12,9 @@ public class ReviewController {
 	@Resource
 	ReviewRepository reviews = new ReviewRepository();
 	
-	@RequestMapping("reviews")
+	@RequestMapping("reviews")//local host
 	public String showReviews(Model model) {
 		model.addAttribute("reviews", reviews.findAllReviews());//what will be iterated over
 		return "reviews-repository";
 	}
-	
-	
 }

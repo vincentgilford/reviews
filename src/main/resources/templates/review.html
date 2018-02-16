@@ -11,14 +11,14 @@
 		Review Specifics
 	</h1>
 
-	<span th:each="review: ${reviews}">
+	<a th:each="review: ${reviews}" style="text-align: left">
 		
-		<img th:src="${review.imageUrl}"/>
+		<img th:src="${review.imageUrl}" style="max-width: 100%; height: auto; max-height: 300px;"/>
 		<h2 th:text="${review.reviewCategory}"/>
 		<p th:text="${review.title}" />
 		<p th:text="${review.content}"/>
 
-	</span>
+	</a>
 	
 	<a href="http://localhost:8080/reviews">Home Page</a>
 

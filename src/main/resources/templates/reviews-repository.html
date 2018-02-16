@@ -11,11 +11,11 @@
 		<h1>A List of Reviews</h1>
 	</header>
 	
-	<div th:each="review: ${reviews}">
-		<h2>
+	<ul th:each="review: ${reviews}">
+		<li>
 			<a th:href="@{/review(id=${review.id})}" th:text="${review.title}"></a>
-		</h2>
-	</div>
+		</li>
+	</ul>
 
 
 </body>

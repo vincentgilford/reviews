@@ -1,6 +1,6 @@
 package org.wecancodeit.reviews;
 
-import org.springframework.stereotype.Component;
+
 
 
 public class Review {

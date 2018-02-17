@@ -17,7 +17,7 @@ public class ReviewRepositoryTest {
 	
 	@Test
 	public void addFirstReview() {
-		ReviewRepository underTest = new ReviewRepository(firstReview);
+	 underTest = new ReviewRepository(firstReview);
 		
 		
 		Review check = underTest.findReview(firstReview.getId()); 

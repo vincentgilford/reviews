@@ -20,6 +20,12 @@ public class ReviewRepository {
 		
 		addReview(firstReview,secondReview,thirdReview);
 	}
+	
+	
+	public ReviewRepository(Review...review) {
+		
+		addReview(review);
+	}
 
 	public void addReview(Review... reviews) {
 		for (Review object : reviews) {

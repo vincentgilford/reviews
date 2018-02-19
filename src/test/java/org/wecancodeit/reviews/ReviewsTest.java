@@ -2,6 +2,11 @@ package org.wecancodeit.reviews;
 
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+
 import static org.hamcrest.Matchers.is;
 
 import org.junit.Before;
@@ -97,7 +102,21 @@ public class ReviewsTest {
 		assertTrue(check instanceof String);
 	}
 	
-	
+	@Test
+	public void tagsAttribute() {
+		Long id = 12345L;
+		String title = "Home Alone";
+		String imageUrl = "www.";
+		String reviewCategory = "Movies";
+		String content = "stuff"; 
+		Collection<String> tags = new ArrayList<String>(Arrays.asList("Comedy","Holidays","classics"));
+		underTest = new Review(id, title, imageUrl, reviewCategory, content,tags);
+		
+		Collection<String> check = underTest.getTags();
+		
+		assertTrue(check instanceof Collection);
+		
+	}
 	
 	
 	

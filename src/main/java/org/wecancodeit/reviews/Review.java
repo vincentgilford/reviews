@@ -1,7 +1,6 @@
 package org.wecancodeit.reviews;
 
-
-
+import java.util.Collection;
 
 public class Review {
 
@@ -10,6 +9,7 @@ public class Review {
 	private String imageUrl;
 	private String reviewCategory;
 	private String content;
+	private Collection<String> tags;
 
 	public Review(Long id, String title, String imageUrl, String reviewCategory, String content) {
 		this.id = id;
@@ -18,6 +18,20 @@ public class Review {
 		this.reviewCategory = reviewCategory;
 		this.content = content;
 		
+	}
+
+	public Review  (Long id, String title, String imageUrl, String reviewCategory, String content, Collection<String> tags) {
+		this.id = id;
+		this.title = title;
+		this.imageUrl = imageUrl;
+		this.reviewCategory = reviewCategory;
+		this.content  = content;
+		this.tags = tags;
+		
+	}
+
+	public Collection<String> getTags() {
+		return tags;
 	}
 
 	public Long getId() {

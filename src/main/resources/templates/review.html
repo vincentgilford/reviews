@@ -4,6 +4,10 @@
 
 <head>
 	<title>Review</title>
+	<style type="text/css">
+		
+	</style>
+
 </head>
 
 <body>
@@ -13,10 +17,11 @@
 
 	<a th:each="review: ${reviews}" style="text-align: left">
 		
-		<img th:src="${review.imageUrl}" style="max-width: 100%; height: auto; max-height: 300px;"/>
-		<h2 th:text="${review.reviewCategory}"/>
+		<img th:src="${review.imageUrl}" width="400"/>
+		<h2 th:text="${review.reviewCategory} + ':'">:</h2>
 		<p th:text="${review.title}" />
 		<p th:text="${review.content}"/>
+		<p th:text="${review.tags}"/>
 	</a>
 	
 	<a href="http://localhost:8080/reviews">Home Page</a>
